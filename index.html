@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Doreca · Reporting</title>
+<style>
+  :root{
+    --navy:#1E2761;--navy2:#27304C;--teal:#028090;--gold:#C9A227;
+    --ink:#1A2230;--mute:#8FA0C8;--line:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--navy);color:#fff;min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:Cambria,Georgia,"Times New Roman",serif}
+  header{width:100%;max-width:980px;padding:64px 28px 30px}
+  .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h1{font-size:42px;font-weight:700;margin-top:10px;letter-spacing:.3px}
+  .sub{color:var(--mute);font-size:15px;margin-top:10px;max-width:60ch;line-height:1.6}
+  main{width:100%;max-width:980px;padding:10px 28px 40px;flex:1}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:18px}
+  a.card{
+    display:block;text-decoration:none;color:#fff;
+    background:var(--navy2);border:1px solid var(--line);border-radius:16px;
+    padding:26px 26px 22px;transition:transform .16s ease,border-color .16s ease,background .16s ease;
+    position:relative;overflow:hidden;
+  }
+  a.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal)}
+  a.card.costi::before{background:var(--gold)}
+  a.card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.25);background:#2C3554}
+  .num{font-family:Cambria,Georgia,serif;font-size:15px;color:var(--gold);font-weight:700;letter-spacing:1px}
+  .card h2{font-size:22px;font-weight:700;margin-top:8px}
+  .card p{color:var(--mute);font-size:13.5px;line-height:1.6;margin-top:8px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+  .tag{font-size:10.5px;font-weight:600;letter-spacing:.4px;padding:4px 11px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:#B8C4E2}
+  .go{margin-top:18px;font-size:13px;font-weight:700;color:#7FD4DE;display:inline-flex;align-items:center;gap:7px}
+  a.card:hover .go{color:#fff}
+  footer{width:100%;max-width:980px;padding:18px 28px 40px;color:#5E6C96;font-size:11px;line-height:1.7;border-top:1px solid var(--line)}
+  @media (max-width:640px){h1{font-size:32px}header{padding-top:44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Doreca Italia · Reporting Direzionale</div>
+  <h1 class="serif">Cruscotti</h1>
+  <p class="sub">Strumenti di monitoraggio basati sui dati consolidati mensili. Valori in €/000, aggiornati al progressivo di maggio 2026.</p>
+</header>
+<main>
+  <div class="grid">
+    <a class="card" href="direzionale.html">
+      <div class="num serif">I</div>
+      <h2 class="serif">Cruscotto Direzionale</h2>
+      <p>Sintesi mensile, andamento 2025–2026, performance dei depositi e piano azioni per cluster di priorità.</p>
+      <div class="tags"><span class="tag">KPI mensili</span><span class="tag">Serie storica</span><span class="tag">Ranking depositi</span><span class="tag">Piano azioni</span></div>
+      <div class="go">Apri il cruscotto →</div>
+    </a>
+    <a class="card costi" href="costi.html">
+      <div class="num serif">II</div>
+      <h2 class="serif">Cruscotto Costi</h2>
+      <p>Analisi costi della rete HoReCa: matrice completa in valore assoluto, drill-down per deposito e per voce, canale store.</p>
+      <div class="tags"><span class="tag">Matrice €/000</span><span class="tag">Per deposito</span><span class="tag">Per voce</span><span class="tag">Store</span></div>
+      <div class="go">Apri il cruscotto →</div>
+    </a>
+  </div>
+</main>
+<footer>
+  Fonte dati: Flash RIEP DEPO CONG · consolidato Totale Doreca · uso interno.<br>
+  Documento riservato — non diffondere il link all'esterno dell'organizzazione.
+</footer>
+</body>
+</html>
